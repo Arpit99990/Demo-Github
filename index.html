@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitHub Cheat Sheet</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #24292e;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background: #f0f0f0;
+      padding: 10px;
+      overflow-x: auto;
+      border-left: 4px solid #ccc;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Git & GitHub Cheat Sheet</h1>
+  <p>A comprehensive guide to using Git and GitHub efficiently.</p>
+
+  <section>
+    <h2>🔧 Setup</h2>
+    <pre>
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git config --list
+    </pre>
+  </section>
+
+  <section>
+    <h2>📂 Create or Clone Repo</h2>
+    <pre>
+git init                # Start a new repo
+git clone &lt;url&gt;         # Clone a repo
+    </pre>
+  </section>
+
+  <section>
+    <h2>📄 Basic Commands</h2>
+    <ul>
+      <li><code>git status</code> – Check status</li>
+      <li><code>git add filename</code> – Stage file</li>
+      <li><code>git add .</code> – Stage all</li>
+      <li><code>git commit -m "msg"</code> – Commit</li>
+      <li><code>git log</code> – View commits</li>
+      <li><code>git diff</code> – Show changes</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🔁 Branching</h2>
+    <pre>
+git branch                # List branches
+git branch feature        # Create branch
+git checkout feature      # Switch to branch
+git checkout -b feature   # Create & switch
+git merge feature         # Merge to current branch
+    </pre>
+  </section>
+
+  <section>
+    <h2>🌍 Remote Repositories</h2>
+    <pre>
+git remote -v
+git remote add origin &lt;url&gt;
+git push -u origin main
+git pull origin main
+git push
+    </pre>
+  </section>
+
+  <section>
+    <h2>🔄 Undo & Reset</h2>
+    <ul>
+      <li><code>git restore file</code> – Discard changes</li>
+      <li><code>git reset HEAD file</code> – Unstage file</li>
+      <li><code>git commit --amend</code> – Modify last commit</li>
+      <li><code>git revert &lt;hash&gt;</code> – Revert a commit</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🧪 GitHub Workflow</h2>
+    <pre>
+# Common GitHub Workflow
+git clone &lt;repo-url&gt;
+git checkout -b feature-branch
+# make changes
+git add .
+git commit -m "Added feature"
+git push origin feature-branch
+
+# Open Pull Request on GitHub
+    </pre>
+  </section>
+
+  <section>
+    <h2>📘 Markdown Basics</h2>
+    <pre>
+# Heading 1
+## Heading 2
+**bold**  *italic*  `inline code`
+- List item
+[Link](https://github.com)
+    </pre>
+  </section>
+
+  <section>
+    <h2>🔗 Useful GitHub Terms</h2>
+    <ul>
+      <li><strong>Fork:</strong> Copy someone else's repo</li>
+      <li><strong>Pull Request:</strong> Suggest code changes</li>
+      <li><strong>Issues:</strong> Report bugs or request features</li>
+      <li><strong>Actions:</strong> Automate CI/CD tasks</li>
+      <li><strong>README.md:</strong> Project description file</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🔐 SSH vs HTTPS</h2>
+    <p>To use SSH instead of HTTPS:</p>
+    <pre>
+ssh-keygen -t rsa -b 4096 -C "you@example.com"
+# Add public key to GitHub → Settings → SSH Keys
+git@github.com:username/repo.git
+    </pre>
+  </section>
+
+  <section>
+    <h2>📦 Git Ignore</h2>
+    <p>Create a <code>.gitignore</code> file to skip files from version control:</p>
+    <pre>
+node_modules/
+.env
+.DS_Store
+*.log
+    </pre>
+  </section>
+
+  <footer>
+    <hr>
+    <p>Made with ❤️ for developers learning Git & GitHub. View official docs at <a href="https://docs.github.com/" target="_blank">GitHub Docs</a>.</p>
+  </footer>
+
+</body>
+</html>
